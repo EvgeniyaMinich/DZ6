@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/style.css">
+  <title>Библиотека</title>
+  </head>
+<body>
+  <h1>Моя библиотека</h1>
+  <input class="book" type="text" id="bookInput" placeholder="Название книги">
+  <input type="text" id="authorInput" placeholder="Автор">
+  <input type="number" id="yearInput" placeholder="Год издания">
+  <input type="text" id="genreInput" placeholder="Жанр">
+  <select id="status">
+    <option value="Не прочитано">Не прочитано</option>
+    <option value="Прочитано">Прочитано</option>
+  </select>
+  <button class="add" onclick="addBook()">Добавить книгу</button>
+  <input class="book" type="text" id="filterInput" placeholder="Фильтр книг" oninput="filterBooks()">
+  <ol id="library"></ol>
+  <div class="parent">
+    <button class="child" onclick="location.reload()">Обновить страницу</button>
+    <button class="child" onclick="deleteLibrary()">Очистить библиотеку</button>  
+  </div>
+  <script src="JS/main.js"></script>
+</body>
+</html>
